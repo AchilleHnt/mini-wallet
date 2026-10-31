@@ -1,0 +1,58 @@
+<?php 
+
+namespace App;
+
+use Exception\MontantInvalide;
+
+final readonly class Montant 
+{
+    private const DEVISE = "XOF"; 
+    public int $montant;
+
+    public function __construct(
+        int $montant
+    ){
+        if($montant < 0) {
+            throw new MontantInvalide();
+        }
+        $this->montant = $montant;
+    }
+
+    public function ajouter(int $montant) : int
+    {
+        return $this->montant + $montant;
+    }
+
+    public function soustraire(int $montant) : int
+    {
+        return $this->montant - $montant;
+    }
+
+    public function estSuperieurOuEgalA(int $montant) : bool 
+    {
+        if($this->montant >= $montant) {
+            return True;
+        } else {
+            return False;
+        }
+    }
+
+    public function egal(int $montant) : bool 
+    {
+        if($this->montant == $montant) {
+            return True;
+        } else {
+            return False;
+        }
+    }
+
+    public function zero()
+    {
+        $this->montant = 0;   
+    }
+
+    public function showMontant() : string 
+    {
+        return $this->montant . "" . Montant::DEVISE;
+    }
+}

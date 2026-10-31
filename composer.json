@@ -1,0 +1,19 @@
+{
+    "name": "php/mini-wallet",
+    "description": "Portefeuille mobile money simplifié : des comptes qui contiennent de l'argent et qui s'envoi de l'argent via des passerelles. Ces paserrelles sont simulés pas de vrai appel réseau",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Exception\\": "Exception/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AchilleHnt",
+            "email": "achillehoun570@gmail.com"
+        }
+    ],
+    "require": {}
+}
