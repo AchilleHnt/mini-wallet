@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "Exception\\": "Exception/"
+            "Exception\\": "Exception/",
+            "Paiement\\": "Paiement/",
+            "Traits\\": "Traits/",
+            "Service\\": "Service/"
         }
     },
     "authors": [

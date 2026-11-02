@@ -18,14 +18,14 @@ final readonly class Montant
         $this->montant = $montant;
     }
 
-    public function ajouter(int $montant) : int
+    public function ajouter(Montant $montant) : Montant
     {
-        return $this->montant + $montant;
+        return new Montant($this->montant + $montant->montant);
     }
 
-    public function soustraire(int $montant) : int
+    public function soustraire(Montant $montant) : Montant
     {
-        return $this->montant - $montant;
+        return new Montant($this->montant - $montant->montant);
     }
 
     public function estSuperieurOuEgalA(int $montant) : bool 
@@ -48,7 +48,7 @@ final readonly class Montant
 
     public function zero()
     {
-        $this->montant = 0;   
+        return new Montant(0); 
     }
 
     public function showMontant() : string 

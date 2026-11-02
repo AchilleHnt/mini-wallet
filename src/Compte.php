@@ -11,9 +11,14 @@ class Compte
         private Montant $solde
     ){}
 
+    public function getSolde() : Montant
+    {
+        return $this->solde;
+    }
+
     public function crediter(Montant $mnt) 
     {
-        return $this->solde->montant + $mnt->montant;
+        $this->solde = $this->solde->ajouter($mnt);
     }
 
     public function debiter(Montant $mnt)
@@ -22,11 +27,8 @@ class Compte
         {
             throw new SoldeInsuffisant();
         }
-        return $this->solde->montant - $mnt->montant;
+        $this->solde = $this->solde->soustraire($mnt);
     }
 
-    public function getSolde() : Montant
-    {
-        return $this->solde;
-    }
+    
 }
