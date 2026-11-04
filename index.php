@@ -21,5 +21,5 @@ $service    = new TransfertService($passerelle);
 $service->transferer($a, $b, new Montant(1000));
 
 echo $passerelle->logs() . PHP_EOL;
-echo "Solde de A : ".$a->getSolde()->montant."\n";
-echo "Solde de B : ".$b->getSolde()->montant."\n";
+echo "Solde de A : ".$a->getSolde()->showMontant()."\n";
+echo "Solde de B : ".$b->getSolde()->showMontant()."\n";
