@@ -184,7 +184,7 @@ Aucun autre fichier n'est modifié.
 
 ## Feuille de route
 
-- [ ] Tests unitaires avec PHPUnit ou Pest (montant négatif, immutabilité, débit refusé, échec de passerelle avec un faux objet)
+- [ ] Tests unitaires avec PHPUnit ou Pest (logique des frais de retrait, montant négatif, immutabilité, débit refusé, échec de passerelle avec un faux objet)
 - [ ] Fichier `.gitignore` et retrait du dossier `vendor/` du dépôt
 - [ ] Historique des transactions avec leur statut
 - [ ] Bonus PHP 8.4 / 8.5 : visibilité asymétrique, property hooks, `clone` avec modifications
