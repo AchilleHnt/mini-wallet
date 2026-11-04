@@ -95,8 +95,8 @@ $service    = new TransfertService($passerelle);
 $service->transferer($a, $b, new Montant(1000));
 
 echo $passerelle->logs() . PHP_EOL;
-echo "Solde de A : ".$a->getSolde()->montant."\n";
-echo "Solde de B : ".$b->getSolde()->montant."\n";
+echo "Solde de A : ".$a->getSolde()->showMontant()."\n";
+echo "Solde de B : ".$b->getSolde()->showMontant()."\n";
 ```
 
 Résultat attendu : le solde de A passe à 2 000 FCFA, celui de B à 4 000 FCFA, et la passerelle journalise l'opération.
